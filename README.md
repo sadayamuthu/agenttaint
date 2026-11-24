@@ -116,7 +116,7 @@ The plan, from the first working version to 1.0, is in [ROADMAP.md](ROADMAP.md).
 
 ## Built on switchyard
 
-`agenttaint` will be a Go binary built on [switchyard](https://github.com/sadayamuthu/switchyard), OpenAstra's shared MCP proxy core: proxy mode is a switchyard hook that labels tool outputs as they pass and blocks calls whose arguments carry untrusted data. It stacks with the other switchyard tools by chaining (`agent → agentfuse → agentlock → agenttaint → agentrewind → MCP server`).
+`agenttaint` will be a Go binary built on [switchyard](https://github.com/sadayamuthu/switchyard), OpenAstra's shared MCP proxy core: proxy mode is a switchyard hook that labels tool outputs as they pass and blocks calls whose arguments carry untrusted data. It stacks with the other switchyard tools by chaining (`agent → agentfuse → agentlock → agenttaint → agentrewind → agentbox → MCP server`).
 
 ---
 
