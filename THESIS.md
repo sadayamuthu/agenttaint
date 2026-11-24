@@ -1,4 +1,4 @@
-# Taintline: thesis
+# AgentTaint: thesis
 
 **In one line:** stop judging whether text looks like an injection; track
 where each value came from and refuse to let untrusted data drive sensitive
@@ -34,7 +34,7 @@ tracking addresses.
 
 ## What success looks like
 
-- On AgentDojo-style suites, Taintline blocks most exfiltration and
+- On AgentDojo-style suites, AgentTaint blocks most exfiltration and
   redirection attacks with a benign-task completion rate close to the
   undefended agent's.
 - False positives from fuzzy matching are low enough that teams keep it in
@@ -54,10 +54,10 @@ tracking addresses.
 ## Not a bet on
 
 Content classifiers, or limiting which tools may be called (that's
-IntentLock).
+AgentLock).
 
 ## Where it fits
 
 Area VIII, AI Runtime Security. Shares sink policy with
-[IntentLock](https://github.com/sadayamuthu/intentlock); static counterpart
+[AgentLock](https://github.com/sadayamuthu/agentlock); static counterpart
 is [ThreatDiff](https://github.com/sadayamuthu/threatdiff).

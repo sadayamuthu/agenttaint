@@ -1,6 +1,6 @@
 # Roadmap
 
-What Taintline plans to work on next. It's a plan, not a promise: priorities
+What AgentTaint plans to work on next. It's a plan, not a promise: priorities
 change with what users report. Discuss any item in an issue before starting
 on it. The reasoning behind the project, and what would make us stop, is in
 [THESIS.md](THESIS.md).

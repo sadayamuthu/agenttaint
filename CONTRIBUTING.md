@@ -1,8 +1,8 @@
-# Contributing to Taintline
+# Contributing to AgentTaint
 
-Thanks for helping. Taintline labels every piece of an AI agent's context by where it came from, follows those labels into tool-call arguments, and blocks or escalates calls where untrusted data reaches a sensitive argument.
+Thanks for helping. AgentTaint labels every piece of an AI agent's context by where it came from, follows those labels into tool-call arguments, and blocks or escalates calls where untrusted data reaches a sensitive argument.
 
-Taintline is at the **design stage**: the README and
+AgentTaint is at the **design stage**: the README and
 [THESIS.md](THESIS.md) describe what it will do, and there is little or no
 code yet. Right now the most useful contributions are on the design itself.
 
@@ -22,8 +22,8 @@ code yet. Right now the most useful contributions are on the design itself.
   work on tells us more than any feature request.
 - **Pick up an area** from the "Wanted" list in
   [MAINTAINERS.md](MAINTAINERS.md), or an issue labelled
-  [`good first issue`](https://github.com/sadayamuthu/taintline/labels/good%20first%20issue)
-  or [`help wanted`](https://github.com/sadayamuthu/taintline/labels/help%20wanted).
+  [`good first issue`](https://github.com/sadayamuthu/agenttaint/labels/good%20first%20issue)
+  or [`help wanted`](https://github.com/sadayamuthu/agenttaint/labels/help%20wanted).
 
 For anything larger than a small fix, open an issue first so we can agree on
 the approach before you write the code.
@@ -42,11 +42,11 @@ still show the problem. Never paste credentials.
 
 ## Development setup
 
-Taintline is written in **Go 1.26** or newer, like every new OpenAstra tool.
+AgentTaint is written in **Go 1.26** or newer, like every new OpenAstra tool.
 
 ```sh
-git clone https://github.com/sadayamuthu/taintline.git
-cd taintline
+git clone https://github.com/sadayamuthu/agenttaint.git
+cd agenttaint
 go build ./...
 ```
 
@@ -75,12 +75,12 @@ before your change and passes after it.
 ## Security
 
 Please don't report security problems in a public issue. Use
-[**Report a vulnerability**](https://github.com/sadayamuthu/taintline/security/advisories/new)
+[**Report a vulnerability**](https://github.com/sadayamuthu/agenttaint/security/advisories/new)
 on the repository's Security tab instead. See [SECURITY.md](SECURITY.md) for
 what to include and what's in scope.
 
 ## License
 
-Taintline is licensed under the [Apache License 2.0](LICENSE). By
+AgentTaint is licensed under the [Apache License 2.0](LICENSE). By
 contributing, you agree that your contributions are licensed under the same
 license.

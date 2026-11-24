@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it using these metadata."
 type: software
-title: "Taintline: Taint tracking for AI agents"
+title: "AgentTaint: Taint tracking for AI agents"
 abstract: >-
-  Taintline labels every piece of an AI agent's context by where it came from,
+  AgentTaint labels every piece of an AI agent's context by where it came from,
   follows those labels into tool-call arguments, and blocks or escalates calls
   where untrusted data reaches a sensitive argument.
 authors:
@@ -11,7 +11,7 @@ authors:
     given-names: Karthikeyan
     orcid: "https://orcid.org/0009-0008-3539-6048"
 license: Apache-2.0
-repository-code: "https://github.com/sadayamuthu/taintline"
+repository-code: "https://github.com/sadayamuthu/agenttaint"
 url: "https://openastra.org"
 keywords:
   - AI agents
